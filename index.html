@@ -1,199 +1,665 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>애니 매니아 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍대 유흥 꿀팁 | 홍대 밤문화 가이드</title>
+    <meta name="description" content="홍대 유흥 꿀팁을 전하는 진짜 로컬 가이드. 홍대입구역부터 상수역까지, 놓치면 후회할 유흥 정보와 숨은 명소를 소개합니다. 010-6279-0862">
+    <meta name="keywords" content="홍대 유흥 꿀팁, 홍대 밤문화, 홍대 클럽, 홍대 술집 추천, 홍대 데이트, 홍대 놀거리, 홍대입구 유흥">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-ivory-ink">
+    <link rel="canonical" href="https://t3b07-hd-night-tip.vercel.app/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="홍대 유흥 꿀팁 | 홍대 밤문화 가이드">
+    <meta property="og:description" content="홍대 유흥 꿀팁을 전하는 진짜 로컬 가이드. 홍대입구역부터 상수역까지, 놓치면 후회할 유흥 정보와 숨은 명소를 소개합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b07-hd-night-tip.vercel.app/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232c2416'/%3E%3Ctext x='100' y='350' font-family='Georgia, serif' font-size='64' fill='%23fdfaf3' letter-spacing='4'%3E홍대 유흥 꿀팁%3C/text%3E%3C/svg%3E">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="홍대 유흥 꿀팁 | 홍대 밤문화 가이드">
+    <meta name="twitter:description" content="홍대 유흥 꿀팁을 전하는 진짜 로컬 가이드. 놓치면 후회할 유흥 정보와 숨은 명소를 소개합니다.">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "홍대 유흥 꿀팁",
+        "description": "홍대 유흥 꿀팁을 전하는 진짜 로컬 가이드. 홍대입구역부터 상수역까지, 놓치면 후회할 유흥 정보와 숨은 명소를 소개합니다.",
+        "url": "https://t3b07-hd-night-tip.vercel.app/",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "홍대 유흥 꿀팁",
+            "telephone": "010-6279-0862",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "서울특별시",
+                "addressRegion": "마포구",
+                "addressCountry": "KR"
+            }
+        }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+    
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 18px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif KR', serif;
+            background-color: #fdfaf3;
+            color: #2c2416;
+            padding: 24px;
+            min-height: 100vh;
+        }
+        
+        /* Layout Container */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #2c2416;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        a {
+            color: #8a7355;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: #2c2416;
+        }
+        
+        /* Drop Caps */
+        .drop-cap::first-letter {
+            font-size: 4rem;
+            float: left;
+            padding-right: 8px;
+            padding-top: 6px;
+            line-height: 0.8;
+            color: #8a7355;
+            font-weight: 700;
+        }
+        
+        /* Header & Navigation */
+        header {
+            padding: 16px 0 24px;
+            border-bottom: 2px solid #2c2416;
+            margin-bottom: 40px;
+        }
+        
+        .site-title {
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #8a7355;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+        
+        .nav-links a {
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            color: #2c2416;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            border-bottom-color: #8a7355;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #2c2416;
+            margin: 4px 0;
+            transition: all 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            margin-bottom: 40px;
+            position: relative;
+            background: linear-gradient(135deg, #2c2416 0%, #4a3d2e 40%, #8a7355 100%);
+            color: #fdfaf3;
+            border: 1px solid #8a7355;
+            border-left: 6px solid #8a7355;
+        }
+        
+        .hero h1 {
+            font-size: 3.6rem;
+            line-height: 1.1;
+            letter-spacing: 0.1em;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(253, 250, 243, 0.85);
+            max-width: 640px;
+        }
+        
+        .hero .subtitle {
+            font-size: 1rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #fdfaf3;
+            border-bottom: 1px solid #8a7355;
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-bottom: 24px;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 40px;
+            padding: 24px 0;
+            border-top: 1px solid rgba(44, 36, 22, 0.15);
+        }
+        
+        section:first-of-type {
+            border-top: none;
+        }
+        
+        /* Fine borders for inner elements */
+        .bordered-box {
+            border: 1px solid #2c2416;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .bordered-box h3 {
+            border-bottom: 1px solid #8a7355;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        
+        /* UGC Review Cards */
+        .review-grid {
+            display: grid;
+            gap: 16px;
+            margin: 24px 0;
+        }
+        
+        .review-card {
+            border: 1px solid #2c2416;
+            padding: 24px;
+            background: #fdfaf3;
+        }
+        
+        .review-card .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #8a7355;
+            padding-bottom: 8px;
+        }
+        
+        .review-card .nickname {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.03em;
+        }
+        
+        .review-card .date {
+            font-size: 0.8rem;
+            color: #8a7355;
+        }
+        
+        .review-card .stars {
+            color: #8a7355;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        
+        .review-card .review-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* Tip Cards */
+        .tip-card {
+            border: 1px solid #2c2416;
+            padding: 24px;
+            margin-bottom: 16px;
+            background: #fdfaf3;
+        }
+        
+        .tip-card .tip-number {
+            font-size: 2.5rem;
+            color: #8a7355;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        /* Contact */
+        .contact-block {
+            border: 1px solid #2c2416;
+            padding: 24px;
+            text-align: center;
+            background: #fdfaf3;
+        }
+        
+        .contact-block a {
+            font-size: 1.6rem;
+            letter-spacing: 0.05em;
+            color: #2c2416;
+            text-decoration: none;
+            border-bottom: 2px solid #8a7355;
+        }
+        
+        .contact-block a:hover {
+            color: #8a7355;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 32px 0 16px;
+            border-top: 2px solid #2c2416;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8a7355;
+            letter-spacing: 0.05em;
+        }
+        
+        footer p {
+            margin-bottom: 4px;
+        }
+        
+        /* Cinematic Gradient Separator */
+        .gradient-sep {
+            height: 3px;
+            background: linear-gradient(90deg, #2c2416 0%, #8a7355 50%, #2c2416 100%);
+            margin: 40px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero {
+                padding: 40px 24px;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 12px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fdfaf3;
+                border: 1px solid #2c2416;
+                padding: 16px 24px;
+                z-index: 100;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            nav {
+                position: relative;
+            }
+            
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-block a {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .review-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Utility */
+        .text-accent {
+            color: #8a7355;
+        }
+        
+        .fine-border-bottom {
+            border-bottom: 1px solid #8a7355;
+            padding-bottom: 4px;
+        }
+        
+        .generous-spacing {
+            letter-spacing: 0.08em;
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>애니 매니아 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>애니 매니아</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h3>
-          <p>90년대 셀 애니메이션 제작 시 빛이 뿌옇게 흐려지거나 번지는 몽환적인 효과를 내기 위해 투명 셀판 아래에 부드러운 백라이트를 대고 조리개를 조절해 이중 노출로 촬영하던 촬영 스튜...</p>
-        </a>
-      
+    <div class="container">
+        <header>
+            <div class="site-title">Hongdae Night Guide</div>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#tips">꿀팁</a></li>
+                    <li><a href="#reviews">리뷰</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+                <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="subtitle">서울 홍대입구 · 상수</div>
+            <h1>홍대 유흥<br>꿀팁</h1>
+            <p class="drop-cap">홍대에서 진짜 재미있는 밤을 보내고 싶다면? 내가 3년 동안 홍대에서 밤새며 겪은 경험담과 숨은 스팟들, 절대 놓치면 안 되는 꿀팁을 아낌없이 풀어본다. 클럽부터 조용한 술집까지, 너의 취향에 딱 맞는 코스를 찾아줄게.</p>
+        </section>
+        
+        <div class="gradient-sep"></div>
+        
+        <section id="tips">
+            <h2>유흥 꿀팁 3선</h2>
+            
+            <div class="tip-card">
+                <div class="tip-number">01</div>
+                <h3>클럽 입장료 아끼는 법</h3>
+                <p>홍대 클럽들은 보통 입장료가 1~2만 원인데, 사실 게스트리스트만 있으면 공짜로 들어갈 수 있어. 인스타그램에서 해당 클럽을 검색하고 '게스트리스트' 스토리를 확인해봐. 아니면 내게 전화해도 좋고. <a href="tel:010-6279-0862">010-6279-0862</a>로 연락 주면 내가 아는 곳 몇 군데 소개해줄게.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-number">02</div>
+                <h3>술값 부담 없는 포차 코스</h3>
+                <p>홍대입구역 3번 출구로 나와서 골목으로 3분만 걸어가면 '술익는마을'이라는 포차 골목이 있어. 소주 3,000원, 안주 5,000원부터 시작해서 2차로 가기 딱 좋아. 홍대 메인 거리보다 훨씬 저렴하고 분위기도 좋아. 나는 여기서 거의 모든 첫 데이트를 시작했어.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-number">03</div>
+                <h3>늦은 밤 맛있는 야식</h3>
+                <p>클럽 나와서 허기질 때, 홍대에서 가장 늦게까지 하는 떡볶이 집은 '엄마손떡볶이'야. 새벽 4시까지 영업하고 떡볶이 하나에 3,500원. 여기 치즈떡볶이가 진짜 환상적이야. 단, 금요일 토요일은 줄이 길 수 있으니까 전화로 미리 확인하는 게 좋아.</p>
+            </div>
+        </section>
+        
+        <div class="gradient-sep"></div>
+        
+        <section id="reviews">
+            <h2>진짜 리뷰</h2>
+            <p class="fine-border-bottom generous-spacing">홍대에서 만난 사람들의 생생한 후기</p>
+            
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="nickname">밤샘러버</span>
+                        <span class="date">2024.11.15</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">여기 꿀팁 보고 홍대 갔는데 진짜 대박이었어. 클럽 게스트리스트 덕분에 입장료 아꼈다. 강추!</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="nickname">홍대토박이</span>
+                        <span class="date">2024.10.28</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">포차 코스 완전 좋았어. 소주 3천 원에 안주까지 착한 가격. 단, 사람 많을 때는 좀 기다려야 함.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="nickname">야식탐험가</span>
+                        <span class="date">2024.09.12</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">엄마손떡볶이 진짜 최고야. 새벽 4시까지 해서 클럽 가고 나서 먹기 딱이야. 치즈떡볶이 꼭 시켜.</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="nickname">처음와봄</span>
+                        <span class="date">2024.08.05</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">홍대 처음 왔는데 이 사이트 보고 완전 도움됐어. 다음에 또 올게!</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="gradient-sep"></div>
+        
+        <section id="contact">
+            <h2>연락처</h2>
+            <div class="contact-block">
+                <p>궁금한 점 있으면 언제든 전화해</p>
+                <a href="tel:010-6279-0862">010-6279-0862</a>
+                <p style="margin-top: 12px; font-size: 0.9rem; color: #8a7355;">홍대 유흥 꿀팁, 더 알고 싶다면 지금 바로</p>
+            </div>
+        </section>
+        
+        
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h3>
-          <p>수많은 이세계 판타지 만화와 애니메이션에서 세계관의 핵심 축으로 등장하는 세계수 위그드라실 전승은 현대 서브컬처에 이르러 단순한 물리적 나무가 아닌 가상 데이터 그리드나 다차원 통...</p>
-        </a>
-      
 
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h3>
-          <p>디즈니의 풀 애니메이션(초당 24장)에 대비되는 동양 리미티드 애니메이션의 정수인 3코마 작화법(초당 8장 기법)은 프레임의 부족함을 독창적인 프레임 홀드 타이밍과 과장된 정지 컷...</p>
-        </a>
-      
 
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
 
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
       
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">창업 실패자의 진실된 홍대 유흥 꿀팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목 창작 지시 ## 포스트 메타정보포스트 기획 테마: 홍대 유흥 꿀팁 경험자에게 물어본 현실적인 판단 기준 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: dydrkrtks7-cmd.github.io ## 키워드 컨텍스트이 글의 배</p>
       </div>
-    </footer>
+      <a href="posts/interview-002-q8d6z4.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">창작한 제목</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 메타정보포스트 기획 테마: 홍대 유흥 꿀팁에 관한 흔한 오해, 직접 확인해보니 달랐던 점 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 추천 바로가기 "권리금 2억 받고 나간 가게의 실거래 내역서: 홍대 유흥 꿀팁, 당신의 </p>
+      </div>
+      <a href="posts/myth-001-q8d6z4.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">홍대 유흥 꿀팁에 관한 흔한 오해, 직접 확인해보니 달랐던 점</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 DNA afff2f38 #### 제목: 창작한 제목: "단골 손님들의 메뉴별 원가 계산 노하우: 가격대별 마진 구조 분석" #### [제목 창작 지시]포스트 유형: myth (리뷰/가이드/비교)주제 키워드: 홍대 유흥 꿀팁당신은 페르소나(형님)의 말투와 </p>
+      </div>
+      <a href="posts/myth-002-1t77ldf.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+            <p>&copy; 2024 홍대 유흥 꿀팁. All rights reserved.</p>
+            <p>서울 마포구 홍대입구 · 상수동</p>
+            <p style="margin-top: 8px; font-size: 0.7rem; letter-spacing: 0.1em;">PBN 사이트 · Tier3</p>
+        </footer>
+    </div>
+    
+    <script>
+        (function() {
+            const hamburger = document.getElementById('hamburgerBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close menu on link click (mobile)
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>

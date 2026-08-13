@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t3b07-hd-night-tip</title>
+  <meta name="description" content="t3b07-hd-night-tip에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://hongdae-club-choice.program-school.online/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* Reset & Base */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ html {
+ font-size: 18px;
+ line-height: 1.7;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ body {
+ font-family: 'Georgia', 'Times New Roman', 'Noto Serif KR', serif;
+ background-color: #fdfaf3;
+ color: #2c2416;
+ padding: 24px;
+ min-height: 100vh;
+ }
+ 
+ /* Layout Container */
+ .container {
+ max-width: 720px;
+ margin: 0 auto;
+ }
+ 
+ /* Typography */
+ h1, h2, h3, h4 {
+ font-weight: 400;
+ letter-spacing: 0.05em;
+ line-height: 1.3;
+ }
+ 
+ h1 {
+ font-size: 3.2rem;
+ letter-spacing: 0.08em;
+ margin-bottom: 16px;
+ }
+ 
+ h2 {
+ font-size: 2rem;
+ letter-spacing: 0.06em;
+ margin-bottom: 24px;
+ border-bottom: 2px solid #2c2416;
+ padding-bottom: 8px;
+ }
+ 
+ h3 {
+ font-size: 1.4rem;
+ letter-spacing: 0.04em;
+ margin-bottom: 12px;
+ }
+ 
+ p {
+ margin-bottom: 16px;
+ font-size: 1rem;
+ line-height: 1.8;
+ }
+ 
+ a {
+ color: #8a7355;
+ text-decoration: underline;
+ text-underline-offset: 3px;
+ transition: color 0.2s;
+ }
+ 
+ a:hover {
+ color: #2c2416;
+ }
+ 
+ /* Drop Caps */
+ .drop-cap::first-letter {
+ font-size: 4rem;
+ float: left;
+ padding-right: 8px;
+ padding-top: 6px;
+ line-height: 0.8;
+ color: #8a7355;
+ font-weight: 700;
+ }
+ 
+ /* Header & Navigation */
+ header {
+ padding: 16px 0 24px;
+ border-bottom: 2px solid #2c2416;
+ margin-bottom: 40px;
+ }
+ 
+ .site-title {
+ font-size: 1.2rem;
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ color: #8a7355;
+ }
+ 
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 8px;
+ }
+ 
+ .nav-links {
+ display: flex;
+ list-style: none;
+ gap: 24px;
+ }
+ 
+ .nav-links a {
+ font-size: 0.9rem;
+ letter-spacing: 0.08em;
+ text-decoration: none;
+ color: #2c2416;
+ border-bottom: 1px solid transparent;
+ transition: border-color 0.2s;
+ }
+ 
+ .nav-links a:hover {
+ border-bottom-color: #8a7355;
+ }
+ 
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 4px;
+ }
+ 
+ .hamburger span {
+ display: block;
+ width: 28px;
+ height: 2px;
+ background: #2c2416;
+ margin: 4px 0;
+ transition: all 0.3s;
+ }
+ 
+ /* Hero Section */
+ .hero {
+ padding: 80px 0 60px;
+ margin-bottom: 40px;
+ position: relative;
+ background: linear-gradient(135deg, #2c2416 0%, #4a3d2e 40%, #8a7355 100%);
+ color: #fdfaf3;
+ border: 1px solid #8a7355;
+ border-left: 6px solid #8a7355;
+ }
+ 
+ .hero h1 {
+ font-size: 3.6rem;
+ line-height: 1.1;
+ letter-spacing: 0.1em;
+ }
+ 
+ .hero p {
+ font-size: 1.1rem;
+ color: rgba(253, 250, 243, 0.85);
+ max-width: 640px;
+ }
+ 
+ .hero .subtitle {
+ font-size: 1rem;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ color: #fdfaf3;
+ border-bottom: 1px solid #8a7355;
+ display: inline-block;
+ padding-bottom: 4px;
+ margin-bottom: 24px;
+ }
+ 
+ /* Sections */
+ section {
+ margin-bottom: 40px;
+ padding: 24px 0;
+ border-top: 1px solid rgba(44, 36, 22, 0.15);
+ }
+ 
+ section:first-of-type {
+ border-top: none;
+ }
+ 
+ /* Fine borders for inner elements */
+ .bordered-box {
+ border: 1px solid #2c2416;
+ padding: 24px;
+ margin-bottom: 24px;
+ }
+ 
+ .bordered-box h3 {
+ border-bottom: 1px solid #8a7355;
+ padding-bottom: 8px;
+ margin-bottom: 16px;
+ }
+ 
+ /* UGC Review Cards */
+ .review-grid {
+ display: grid;
+ gap: 16px;
+ margin: 24px 0;
+ }
+ 
+ .review-card {
+ border: 1px solid #2c2416;
+ padding: 24px;
+ background: #fdfaf3;
+ }
+ 
+ .review-card .review-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ margin-bottom: 8px;
+ border-bottom: 1px solid #8a7355;
+ padding-bottom: 8px;
+ }
+ 
+ .review-card .nickname {
+ font-weight: 700;
+ font-size: 1.1rem;
+ letter-spacing: 0.03em;
+ }
+ 
+ .review-card .date {
+ font-size: 0.8rem;
+ color: #8a7355;
+ }
+ 
+ .review-card .stars {
+ color: #8a7355;
+ font-size: 1.2rem;
+ letter-spacing: 2px;
+ margin-bottom: 12px;
+ }
+ 
+ .review-card .review-text {
+ font-size: 0.95rem;
+ line-height: 1.7;
+ }
+ 
+ /* Tip Cards */
+ .tip-card {
+ border: 1px solid #2c2416;
+ padding: 24px;
+ margin-bottom: 16px;
+ background: #fdfaf3;
+ }
+ 
+ .tip-card .tip-number {
+ font-size: 2.5rem;
+ color: #8a7355;
+ font-weight: 700;
+ line-height: 1;
+ margin-bottom: 8px;
+ }
+ 
+ /* Contact */
+ .contact-block {
+ border: 1px solid #2c2416;
+ padding: 24px;
+ text-align: center;
+ background: #fdfaf3;
+ }
+ 
+ .contact-block a {
+ font-size: 1.6rem;
+ letter-spacing: 0.05em;
+ color: #2c2416;
+ text-decoration: none;
+ border-bottom: 2px solid #8a7355;
+ }
+ 
+ .contact-block a:hover {
+ color: #8a7355;
+ }
+ 
+ /* Footer */
+ footer {
+ padding: 32px 0 16px;
+ border-top: 2px solid #2c2416;
+ margin-top: 40px;
+ text-align: center;
+ font-size: 0.8rem;
+ color: #8a7355;
+ letter-spacing: 0.05em;
+ }
+ 
+ footer p {
+ margin-bottom: 4px;
+ }
+ 
+ /* Cinematic Gradient Separator */
+ .gradient-sep {
+ height: 3px;
+ background: linear-gradient(90deg, #2c2416 0%, #8a7355 50%, #2c2416 100%);
+ margin: 40px 0;
+ }
+ 
+ /* Responsive */
+ @media (max-width: 768px) {
+ body {
+ padding: 16px;
+ }
+ 
+ h1 {
+ font-size: 2.2rem;
+ }
+ 
+ .hero h1 {
+ font-size: 2.4rem;
+ }
+ 
+ .hero {
+ padding: 40px 24px;
+ }
+ 
+ .container {
+ max-width: 100%;
+ }
+ 
+ .nav-links {
+ display: none;
+ flex-direction: column;
+ gap: 12px;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: #fdfaf3;
+ border: 1px solid #2c2416;
+ padding: 16px 24px;
+ z-index: 100;
+ }
+ 
+ .nav-links.active {
+ display: flex;
+ }
+ 
+ .hamburger {
+ display: flex;
+ }
+ 
+ nav {
+ position: relative;
+ }
+ 
+ .review-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .contact-block a {
+ font-size: 1.2rem;
+ }
+ }
+ 
+ @media (min-width: 769px) {
+ .review-grid {
+ grid-template-columns: 1fr 1fr;
+ }
+ }
+ 
+ /* Utility */
+ .text-accent {
+ color: #8a7355;
+ }
+ 
+ .fine-border-bottom {
+ border-bottom: 1px solid #8a7355;
+ padding-bottom: 4px;
+ }
+ 
+ .generous-spacing {
+ letter-spacing: 0.08em;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · t3b07-hd-night-tip">
+  <meta property="og:description" content="t3b07-hd-night-tip에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://hongdae-club-choice.program-school.online/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="site-title">Hongdae Night Guide</div>
+ <nav>
+ <ul class="nav-links" id="navLinks">
+ <li><a href="#">홈</a></li>
+ <li><a href="#tips">꿀팁</a></li>
+ <li><a href="#reviews">리뷰</a></li>
+ <li><a href="#contact">문의</a></li>
+ </ul>
+ <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+ 
+ 
+ 
+ </button>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 38개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0057.html">홍대 유흥 꿀팁 확인하고 구글 알고리즘 고신용 도메인 보증 카드 발급 받기</a>
+        <p class="post-item__summary">번화가를 방문하는 초행자들은 정보 부족으로 인해 예기치 못한 난관에 봉착하곤 합니다. 마치 복잡한 시스템 속에서 신용 한도를 설정하지 못해 제약이 따르는 상황과 유사합니다. 철저한 사전 준비는 이러</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0058.html">홍대 유흥 꿀팁 찾아 검색엔진 위기 극복하는 자세히 보기</a>
+        <p class="post-item__summary">일부 사용자들은 검색엔진의 노출이 단순히 콘텐츠의 양에 비례한다고 오해하곤 합니다. 하지만 시스템의 알고리즘은 생각보다 훨씬 복잡하며 정교한 치료적 접근을 요구합니다. 잘못된 정보를 바탕으로 무리한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0059.html">홍대 유흥 꿀팁 따라 마포 단체 회식용 대형 룸 노래방 가격 정보 확인하기</a>
+        <p class="post-item__summary">성공적인 단체 회식을 위해서는 넓은 공간과 적절한 분위기 그리고 합리적인 비용이 삼박자를 이루어야 합니다. 특히 인원 구성이 많아질수록 동선과 서비스 환경이 무엇보다 중요해집니다. 막연한 검색보다는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0060.html">홍대 유흥 꿀팁 기반으로 4</a>
+        <p class="post-item__summary">당신은 현재 자동화 기술을 학습하여 실질적인 수익을 창출할 준비가 되셨습니까? 급변하는 마케팅 시장에서 무인 마케팅 스쿨을 찾는 것은 대단히 전략적인 결정입니다. 막연한 호기심으로 시작하기보다는 기</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0061.html">홍대 유흥 꿀팁: 후기 신뢰도 판별 절차</a>
+        <p class="post-item__summary">홍대 유흥 정보를 찾을 때 가장 중요한 것 중 하나는 신뢰할 수 있는 후기를 분별하는 능력입니다. 검증되지 않은 정보는 시간과 비용 낭비로 이어질 수 있으며, 만족스러운 경험을 방해할 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0062.html">홍대 유흥 꿀팁: 마포 셔츠룸 예약 눈탱이 피하는 법</a>
+        <p class="post-item__summary">홍대 및 마포 지역에서 셔츠룸을 이용할 때, 합리적인 가격으로 만족스러운 경험을 하기 위해서는 '눈탱이' 즉, 과도한 요금 청구를 피하는 것이 중요합니다. 이는 단순히 가격이 저렴한 곳을 찾는 것을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0063.html">홍대 유흥 꿀팁: 지수 성장 클리닉 정보</a>
+        <p class="post-item__summary">온라인에서의 영향력을 높이기 위해 도메인 지수 관리와 앵커 텍스트 전략은 매우 중요합니다. 특히, '도메인 지수 탈모'라는 표현은 지수가 급격히 하락하는 현상을 비유적으로 나타내며, 이를 방지하고 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0064.html">홍대 유흥 꿀팁: 마포 홍대 로컬 럭셔리 밤문화 가이드</a>
+        <p class="post-item__summary">마포와 홍대 지역의 로컬 럭셔리 밤문화를 제대로 즐기기 위해서는 체계적인 준비가 필요합니다. 흔히 알려진 정보 외에 숨겨진 보석 같은 장소를 발굴하고, 만족스러운 경험을 보장받기 위한 확인 항목들을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0065.html">홍대 유흥 꿀팁: 마포 럭셔리 단체 가라오케 예약, 초행길이라면 꼭 보세요</a>
+        <p class="post-item__summary">홍대에서 특별한 밤을 계획하고 계신가요? 특히 여러 명의 친구들과 함께 럭셔리한 분위기에서 노래를 부르며 즐길 수 있는 단체 가라오케는 잊지 못할 추억을 선사할 것입니다. 하지만 처음 방문하는 경우</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0066.html">홍대 유흥 꿀팁: 구글 신뢰 지수 모발이식 솔루션, 흔한 오해를 바로잡다</a>
+        <p class="post-item__summary">모발 이식에 대해 고민하는 분들 사이에서 '구글 신뢰 지수'라는 용어가 종종 언급되곤 합니다. 이는 마치 검색 엔진 최적화(SEO)에서 웹사이트의 신뢰도를 평가하는 것처럼, 모발 이식 병원이나 시술</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0067.html">홍대 유흥 꿀팁: 마포 코인노래방 방음 시설 비교, 소음 진동 저감 솔루션</a>
+        <p class="post-item__summary">홍대에서 친구들과 흥겨운 시간을 보내고 싶을 때, 코인 노래방은 부담 없이 즐길 수 있는 좋은 선택지입니다. 하지만 때로는 노래 소리가 외부로 새어 나가거나, 옆방의 소음이 들려와 집중하기 어려운 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0068.html">홍대 유흥 꿀팁: 셔츠룸 사이트, 업체를 어떻게 비교해야 할까?</a>
+        <p class="post-item__summary">홍대에서 특별한 경험을 찾고 계신가요? 셔츠룸은 독특한 분위기와 서비스를 제공하는 곳으로 많은 사람들에게 인기를 얻고 있습니다. 하지만 여러 셔츠룸 사이트와 업체를 접하다 보면, 어떤 곳을 선택해야</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0069.html">홍대 유흥 꿀팁 확인하고 떠나는 동대문 마사지 명소 탐방</a>
+        <p class="post-item__summary">홍대 유흥 꿀팁을 찾아 헤매던 이들이라면 동대문 지역의 휴식처에도 관심을 가져볼 만합니다. 신뢰할 수 있는 마사지 숍을 고르는 첫 번째 단계는 실제 방문객들의 후기가 꾸준히 업데이트되는지 확인하는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0070.html">홍대 유흥 꿀팁과 비교하는 마포 합정 소셜 라운지 매력</a>
+        <p class="post-item__summary">홍대 유흥 꿀팁을 찾아본 이들이라면 인근 지역의 새로운 문화 공간에도 눈길이 가기 마련입니다. 대규모 파티 문화와 대조적으로 마포 및 합정 일대는 소수 정예의 프라이빗한 모임을 지향하는 곳이 많습니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0471.html">홍대 유흥 꿀팁 예약 절차와 구글 틈새 키워드 트래픽 외환 거래 전략</a>
+        <p class="post-item__summary">성공적인 경험을 위한 홍대 유흥 꿀팁 정보는 예약의 기초에서부터 시작된다. 많은 이들이 무턱대고 현장을 방문하여 시간을 낭비하지만, 사전에 정해진 절차를 거치면 훨씬 효율적인 일정을 소화할 수 있다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0472.html">홍대 유흥 꿀팁 활용한 마포 홍대 단체 가라오케 예약 가이드 및 합정 가라오케 정보</a>
+        <p class="post-item__summary">홍대와 합정 지역을 방문할 때 유용한 홍대 유흥 꿀팁 중 가장 핵심은 단체 모임의 규모에 적합한 공간을 선정하는 일입니다. 인원이 많을수록 위치의 접근성과 내부 편의 시설을 면밀히 검토해야 합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0473.html">홍대 유흥 꿀팁으로 보는 합정 셔츠룸 단골들이 뽑은 핫플 매거진 이용 주의점</a>
+        <p class="post-item__summary">처음 홍대를 방문한 이들이 종종 겪는 상황은 화려한 간판 속에 숨겨진 다양한 매장 사이에서 어디를 선택해야 할지 갈피를 잡지 못하는 것입니다. 홍대 유흥 꿀팁을 검색하며 무작정 발길이 닿는 곳으로 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0474.html">홍대 유흥 꿀팁을 찾듯 구글 인덱싱 속도 초고속 광회선 대역폭 최적화 정보</a>
+        <p class="post-item__summary">흔히 웹사이트의 성능을 개선할 때 트래픽이 몰리는 시간대에는 무엇을 해도 소용없다는 오해를 하곤 합니다. 마치 홍대 유흥 꿀팁을 찾아 사람들이 가장 붐비는 금요일 밤에만 장소를 찾으려는 것과 비슷한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0475.html">홍대 유흥 꿀팁 활용한 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드 전략</a>
+        <p class="post-item__summary">성공적인 홍대 유흥 꿀팁을 찾기 위해서는 먼저 타깃 고객이 선호하는 업장의 특징을 파악하는 것이 급선무입니다. 최근 마포 지역의 트렌드는 투명한 정보 공개와 체계적인 예약 시스템을 갖춘 곳으로 집중</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0397.html">홍대 유흥 꿀팁 활용하며 상수 마사지 추천정보 찾아보기</a>
+        <p class="post-item__summary">상수 지역에서 마사지 샵을 선택할 때 가장 먼저 고려해야 할 사항은 신뢰할 수 있는 정보를 선별하는 과정입니다. 홍대 유흥 꿀팁 등을 검색하여 얻은 데이터가 무조건 정확하다고 믿는 것은 위험할 수 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
